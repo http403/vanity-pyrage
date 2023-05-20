@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "vanity-pyrage"
+version = "0.1.0"
+description = "Age vanity key generation tool powered by pyrage"
+authors = ["Hartman Tam <git@hartmantam.xyz>"]
+readme = "README.md"
+packages = [{include = "vanity_pyrage"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyrage = "^1.0.3"
+
+[tool.poetry.scripts]
+vanity-pyrage = "vanity_pyrage.app:cli"
+
+
+[tool.poetry.group.dev.dependencies]
+pyrage-stubs = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
